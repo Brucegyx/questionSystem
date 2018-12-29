@@ -1,0 +1,19 @@
+{
+  "name": "questionsystem",
+  "version": "1.0.0",
+  "description": "System to store test questions and selecting questions",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brucegyx/questionSystem.git"
+  },
+  "author": "Bruce Gao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brucegyx/questionSystem/issues"
+  },
+  "homepage": "https://github.com/Brucegyx/questionSystem#readme"
+}
