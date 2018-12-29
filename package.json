@@ -1,19 +1,16 @@
 {
   "name": "questionsystem",
-  "version": "1.0.0",
-  "description": "System to store test questions and selecting questions",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "test"
+    "start": "node index"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Brucegyx/questionSystem.git"
-  },
-  "author": "Bruce Gao",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Brucegyx/questionSystem/issues"
-  },
-  "homepage": "https://github.com/Brucegyx/questionSystem#readme"
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0"
+  }
 }
