@@ -17,12 +17,14 @@ questionRouter.route('/')
 .get((request, response, next) => {
   Questions.find({})
   .then((questions) => {
+    console.log('request is working');
     response.json(questions);
+    response.end('Connected GET!');
   }, (err) => next(err)) // forward error to error handler
   .catch((err) => next(err));
 })
 // create a question in DB with fields in the req body
-.post((requset, response, next) => {
+.post((request, response, next) => {
   Questions.create(request.body)
   .then((question) => {
     console.log(question);
@@ -31,7 +33,7 @@ questionRouter.route('/')
   .catch((err) => next(err))
 })
 // put on all questions is not suppported
-.put((requset, response, next) => {
+.put((request, response, next) => {
   response.statusCode = 403;
   response.end('PUT not supported right now.');
 })
@@ -53,7 +55,7 @@ questionRouter.route('/:quesId')
     response.json(question);
 
   }, (err) => next(err))
-  .catch(err => next(err))
+  .catch(err => next(err));
 })
 // POST is not supported right now on specific question
 .post((request, response, next) => {
@@ -67,7 +69,7 @@ questionRouter.route('/:quesId')
     response.setHeader('Content-Type', 'application/json');
     response.json(updatedQues);
   }, (err) => next(err))
-  .catch((err) => next(err))
+  .catch((err) => next(err));
 })
 // delete specific question
 .delete((request, response, next) => {
@@ -79,4 +81,6 @@ questionRouter.route('/:quesId')
 
   }, (err) => next(err))
   .catch((err) => next(err))
-})
+});
+
+module.exports = questionRouter;

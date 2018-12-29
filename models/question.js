@@ -14,7 +14,7 @@ var questionSchema = new Schema({
   },
   difficulty: {
     type: String,
-    required: true.
+    required: true,
     default: 'Easy'
   },
   content: {
