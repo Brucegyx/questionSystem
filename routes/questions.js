@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-const Questions = require('../models/questions');
+const Questions = require('../models/question.js');
 const questionRouter = express.Router();
 
 questionRouter.use(bodyParser.json());
